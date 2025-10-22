@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--bootstrap CSS link-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <style>
+      .navbar-brand {
+  width: 55px;
+  margin: 0px;
+  padding: 0px;
+  animation: heartbeat 1.5s infinite; /*1.5s means speed of moving or pumping */
+  /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+@keyframes heartbeat {
+  /*transform: translate(5px, 5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);*/
+  50% {
+    transform: scale(
+      1.1
+    ); /*50% means that image wolud be of 1.3 size in 50% of time means 1.5s me image brhi ho kr phr apny real size pr wapis b aye gi 50% mtlb aadhy time me size increase ho ga or bki k aadhy time me real size me aye ga agr 70% kry to 1s me image size increase ho ga or 0.5s me real size pr wapis aye ga */
+  }
+}
+      .patient-table {
+        margin: 35px 0px;
+        box-shadow: 0px 0px 10px 1px rgb(197, 197, 197);
+      }
+      .note {
+        box-shadow: 0px 0px 10px 1px rgb(197, 197, 197);
+      }
+      @media (max-width: 995px) {
+        .patient-table .email {
+            display: none;
+        }
+        .patient-table {
+            font-size: 15px;
+        }
+      }
+      @media (max-width: 555px) {
+        .patient-table .gender {
+            display: none;
+        }
+        .patient-table {
+            font-size: 15px;
+        }
+      }
+      @media (max-width: 485px) {
+        .navbar-brand {
+            width: 40px;
+        }
+        .register {
+            font-size: 20px;
+        }
+        .patient-table .age {
+            display: none;
+        }
+        .patient-table {
+            font-size: 10px;
+            margin: 20px 0px;
+        }
+        .note {
+            padding: 15px !important;
+            font-size: 10px;
+        }
+      }
+    </style>
+    <title>Patients Table</title>
+  </head>
+  <body class="bg-primary-subtle">
+    <div class="container-fluid">
+      <img class="navbar-brand mt-3 ms-3" src="./Picture1.png" alt="" />
+      <div class="container text-center mb-5">
+        <h1 class="text-center fw-bold register" style="color: rgb(10, 10, 143)">
+          Registered Patients
+        </h1>
+        <table class="table table-bordered table-hover patient-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col" class="age">Age</th>
+              <th scope="col" class="gender">Gender</th>
+              <th scope="col" class="email">Email</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Last Visit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Adeel Khan</td>
+              <td class="age">45</td>
+              <td class="gender">Male</td>
+              <td class="email">adeel.khan@example.com</td>
+              <td>0301-1234567</td>
+              <td>2025-10-10</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Sana Tariq</td>
+              <td class="age">32</td>
+              <td class="gender">Female</td>
+              <td class="email">sana.tariq@example.com</td>
+              <td>0322-9876543</td>
+              <td>2025-09-28</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Bilal Zafar</td>
+              <td class="age">29</td>
+              <td class="gender">Male</td>
+              <td class="email">bilal.zafar@example.com</td>
+              <td>0300-4567890</td>
+              <td>2025-10-15</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Mehwish Raza</td>
+              <td class="age">38</td>
+              <td class="gender">Female</td>
+              <td class="email">mehwish.raza@example.com</td>
+              <td>0333-1122334</td>
+              <td>2025-10-05</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Usman Khalid</td>
+              <td class="age">50</td>
+              <td class="gender">Male</td>
+              <td class="email">usman.khalid@example.com</td>
+              <td>0345-9988776</td>
+              <td>2025-09-30</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Zara Sheikh</td>
+              <td class="age">27</td>
+              <td class="gender">Female</td>
+              <td class="email">zara.sheikh@example.com</td>
+              <td>0302-1122334</td>
+              <td>2025-10-12</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Hamza Rafiq</td>
+              <td class="age">41</td>
+              <td class="gender">Male</td>
+              <td class="email">hamza.rafiq@example.com</td>
+              <td>0311-2233445</td>
+              <td>2025-10-08</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Nida Aslam</td>
+              <td class="age">35</td>
+              <td class="gender">Female</td>
+              <td class="email">nida.aslam@example.com</td>
+              <td>0344-5566778</td>
+              <td>2025-09-25</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>Fahad Mehmood</td>
+              <td class="age">30</td>
+              <td class="gender">Male</td>
+              <td class="email">fahad.mehmood@example.com</td>
+              <td>0300-6677889</td>
+              <td>2025-10-14</td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>Hira Naveed</td>
+              <td class="age">22</td>
+              <td class="gender">Female</td>
+              <td class="email">hira.naveed@example.com</td>
+              <td>0321-9988776</td>
+              <td>2025-10-03</td>
+            </tr>
+            <tr>
+              <th scope="row">11</th>
+              <td>Salman Tariq</td>
+              <td class="age">48</td>
+              <td class="gender">Male</td>
+              <td class="email">salman.tariq@example.com</td>
+              <td>0333-4455667</td>
+              <td>2025-09-29</td>
+            </tr>
+            <tr>
+              <th scope="row">12</th>
+              <td>Amina Javed</td>
+              <td class="age">39</td>
+              <td class="gender">Female</td>
+              <td class="email">amina.javed@example.com</td>
+              <td>0301-3344556</td>
+              <td>2025-10-11</td>
+            </tr>
+            <tr>
+              <th scope="row">13</th>
+              <td>Danish Ali</td>
+              <td class="age">26</td>
+              <td class="gender">Male</td>
+              <td class="email">danish.ali@example.com</td>
+              <td>0345-7788990</td>
+              <td>2025-10-06</td>
+            </tr>
+            <tr>
+              <th scope="row">14</th>
+              <td>Saba Qureshi</td>
+              <td class="age">31</td>
+              <td class="gender">Female</td>
+              <td class="email">saba.qureshi@example.com</td>
+              <td>0315-6677880</td>
+              <td>2025-09-27</td>
+            </tr>
+            <tr>
+              <th scope="row">15</th>
+              <td>Taha Hussain</td>
+              <td class="age">44</td>
+              <td class="gender">Male</td>
+              <td class="email">taha.hussain@example.com</td>
+              <td>0309-2233445</td>
+              <td>2025-10-09</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note text-start p-5 mb-5 bg-light">
+        <span class="fs-2 fw-bold" style="color: rgb(10, 10, 143)">Note: </span><span>Patients' Data is the Confidential Data of the hopital and it's hospital's duty to take care of patients' personal data so all patients' data list would not be accessible by everyone. Only doctors and other authorized users would be able to get access of this data.</span>
+         </div>
+      </div>
+    </div>
+    
+  </body>
+  <!--bootstrap JS link-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</html>
